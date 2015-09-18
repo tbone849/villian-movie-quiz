@@ -1,4 +1,4 @@
-/* body and subtite */
+/* subtitle */
 @font-face {
   font-family: "CaviarDreams";
   src: url("fonts/CaviarDreams.ttf") format("truetype");
@@ -29,7 +29,7 @@
   src: url("fonts/DJB WERECOW OF DANVILLE.ttf") format("truetype");
 }
 
-/* the anti-hero */
+/* body */
 @font-face {
   font-family: "GeosansLight";
   src: url("fonts/GeosansLight.ttf") format("truetype");
@@ -41,7 +41,45 @@
   font-style: italic;
 }
 
+header {
+	text-align: center;
+}
 
+html {
+	background-color: rgb(86, 86, 86);
+}
 
+body {
+	font-family: "GeosansLight", arial;
+	font-size: 1.5em;
+}
+
+header {
+	margin: 1em 2em;
+}
+
+.title {
+	clear: both;
+}
+
+.villian {
+	font-family: "DJB WERECOW OF DANVILLE", arial;
+	font-size: 2.5em;
+	color: #FF9933;
+}
+
+.anti-hero {
+	font-family: "CaviarDreams", monospace;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.subtitle {
+	font-weight: bold;
+}
+
+.instructions {
+	float: left;
+}
 
 
