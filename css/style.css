@@ -1,0 +1,47 @@
+/* body and subtite */
+@font-face {
+  font-family: "CaviarDreams";
+  src: url("fonts/CaviarDreams.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CaviarDreams";
+  src: url("fonts/CaviarDreams_Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CaviarDreams";
+  src: url("fonts/CaviarDreams_BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "CaviarDreams";
+  src: url("fonts/CaviarDreams_Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+/* villian */
+@font-face {
+  font-family: "DJB WERECOW OF DANVILLE";
+  src: url("fonts/DJB WERECOW OF DANVILLE.ttf") format("truetype");
+}
+
+/* the anti-hero */
+@font-face {
+  font-family: "GeosansLight";
+  src: url("fonts/GeosansLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GeosansLight";
+  src: url("fonts/GeosansLight-Oblique.ttf") format("truetype");
+  font-style: italic;
+}
+
+
+
+
+
