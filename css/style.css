@@ -1,43 +1,43 @@
 /* subtitle */
 @font-face {
   font-family: "CaviarDreams";
-  src: url("fonts/CaviarDreams.ttf") format("truetype");
+  src: url("../fonts/CaviarDreams.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "CaviarDreams";
-  src: url("fonts/CaviarDreams_Bold.ttf") format("truetype");
+  src: url("../fonts/CaviarDreams_Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "CaviarDreams";
-  src: url("fonts/CaviarDreams_BoldItalic.ttf") format("truetype");
+  src: url("../fonts/CaviarDreams_BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: "CaviarDreams";
-  src: url("fonts/CaviarDreams_Italic.ttf") format("truetype");
+  src: url("../fonts/CaviarDreams_Italic.ttf") format("truetype");
   font-style: italic;
 }
 
 /* villian */
 @font-face {
   font-family: "DJB WERECOW OF DANVILLE";
-  src: url("fonts/DJB WERECOW OF DANVILLE.ttf") format("truetype");
+  src: url("../fonts/DJB WERECOW OF DANVILLE.ttf") format("truetype");
 }
 
 /* body */
 @font-face {
   font-family: "GeosansLight";
-  src: url("fonts/GeosansLight.ttf") format("truetype");
+  src: url("../fonts/GeosansLight.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "GeosansLight";
-  src: url("fonts/GeosansLight-Oblique.ttf") format("truetype");
+  src: url("../fonts/GeosansLight-Oblique.ttf") format("truetype");
   font-style: italic;
 }
 
@@ -51,21 +51,27 @@ html {
 
 body {
 	font-family: "GeosansLight", arial;
+  font-weight: bold;
 	font-size: 1.5em;
 }
 
 header {
-	margin: 1em 2em;
+	margin: 2em 2em;
 }
 
 .title {
 	clear: both;
 }
 
-.villian {
+.villain {
 	font-family: "DJB WERECOW OF DANVILLE", arial;
 	font-size: 2.5em;
 	color: #FF9933;
+  padding: .8em 0;
+  background-image: url("../images/villain.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
 }
 
 .anti-hero {
@@ -76,10 +82,50 @@ header {
 
 .subtitle {
 	font-weight: bold;
+  margin-left: 42%;
+  text-align: left;
 }
 
 .instructions {
 	float: left;
+  color: #FF9933;
 }
 
+.content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
 
+.picture, .question {
+  display: inline-block;
+}
+
+.picture {
+  margin-right: 2em;
+}
+
+.question {
+  vertical-align: top;
+  text-align: justify;
+}
+
+.orange {
+  color: #FF9933;
+}
+
+#submitButton {
+  margin-top: 2em;
+}
+
+input[type="radio"] {
+  margin-right: 4px;
+}
+
+.fa-question {
+  color: black;
+}
+
+footer {
+  text-align: center;
+}

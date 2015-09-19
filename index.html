@@ -2,26 +2,43 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Moive Villian Quiz</title>
+	<title>Moive Villain Quiz</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
 	<header>
-		<div class="instructions">Instructions</div>
+		<div class="instructions">
+			<span class="fa-stack">
+  				<i class="fa fa-circle fa-stack-2x"></i>
+  				<i class="fa fa-question fa-stack-1x fa-inverse"></i> 
+			</span>
+		</div>
 		<div class="title">
-			<span class="villian">Villians</span>
+			<span class="villain">Villains</span>
 			<span class="anti-hero">: the anti-heroes</span>
 		</div>
-		<div class="subtitle">Can you name the movie by its villian?</div>
+		<div class="subtitle">Can you name the movie by its villain?</div>
 	</header>
 	<section class="content">
-		<div class="picture"></div>
-		<div class="question"></div>
+		<div class="picture">
+			<img src="images/mr-stay-puft.jpg" class="villainPic">
+		</div>
+		<div class="question">
+			<h2><span class="orange">Villain</span> #7</h2>
+			<form class="answers">
+  				<input type="radio" name="answer" value="a" checked>Godzilla</br>
+  				<input type="radio" name="answer" value="b">Nightmare on Elm Street</br>
+  				<input type="radio" name="answer" value="c">Ghostbusters</br>
+  				<input type="radio" name="answer" value="d">Die Hard</br>
+  				<input type="submit" value="Submit Answer" id="submitButton">
+			</form>
+		</div>
 	</section>
 	<footer>
-		
+		<h2>You have answered <span class="correct orange">5</span> out of 10 correct</h2>
 	</footer>
 	
 </body>
