@@ -104,7 +104,7 @@ $( document ).ready(function() {
 		answer: "Terminator 2: Judgement Day"
 	});
 
-	var count;
+	var count = 0;
 	var correct = 0;
 
 	updateQuestion();
@@ -118,6 +118,7 @@ $( document ).ready(function() {
 		compareAnswers(userAnswer, correctAnswer);
 		count++
 		updateQuestion();
+		$('.correct').text(correct);
 	}
 
 	function compareAnswers(a, b){
@@ -131,14 +132,15 @@ $( document ).ready(function() {
 	}
 
 	function updateQuestion(){
-		$('.count').text(count + 1);
+		$('.correct').text(correct);
+		$('.count').text(count);
 		$('.villainPic').attr("src", question[count].picture);
 		$('.answerA').text(question[count].answerA);
 		$('.answerB').text(question[count].answerB);
 		$('.answerC').text(question[count].answerC);
 		$('.answerD').text(question[count].answerD);
+		$('input[type="radio"][name="answer"]:first').attr("checked");
 	}
-
 });
 
 
