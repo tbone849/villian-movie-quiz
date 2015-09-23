@@ -118,6 +118,19 @@ $( document ).ready(function() {
 		
 	function onFormSubmit(event){
 		event.preventDefault();
+		var userAnswer = $('input[type="radio"][name="answer"]:checked').val();
+		var correctAnswer = question[count].correct;
+		compareAnswers(userAnswer, correctAnswer);
+	}
+
+	function compareAnswers(a, b){
+		if(a === b){
+			$('.feedbackModal').text("Correct!");
+			correct++;
+		}
+		else {
+			$('.feedbackModal').text("The correct answer was " + question[count].answer);
+		}
 	}
 
 });
@@ -125,12 +138,4 @@ $( document ).ready(function() {
 
 
 
-if(user === correct){
-			$('.feedbackModal').text("Correct!");
-			correct++;
-
-		}
-		else {
-			$('.feedbackModal').text("The correct answer was " + question[count].answer);
-		}
 
