@@ -134,7 +134,7 @@ $( document ).ready(function() {
 	function updateQuestion(){
 		$('.correct').text(correct);
 		$('.count').text(count);
-		$('.villainPic').attr("src", question[count].picture);
+		$('.picture').css('background-image', "url(" +question[count].picture + ")");
 		$('.answerA').text(question[count].answerA);
 		$('.answerB').text(question[count].answerB);
 		$('.answerC').text(question[count].answerC);

@@ -92,7 +92,7 @@ header {
 }
 
 .content {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
 }
@@ -102,10 +102,16 @@ header {
 }
 
 .picture {
+  width: 50%;
+  height: 15em;
   margin-right: 2em;
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 .question {
+  width: 40%;
   vertical-align: top;
   text-align: justify;
 }
@@ -128,5 +134,8 @@ input[type="radio"] {
 
 footer {
   text-align: center;
-  /*display: none;*/
+}
+
+.feedbackModal {
+  display: none;
 }
