@@ -106,6 +106,7 @@ $( document ).ready(function() {
 
 	var count = 0;
 	var correct = 0;
+	var questionCount = 1;
 
 	updateQuestion();
 
@@ -116,30 +117,50 @@ $( document ).ready(function() {
 		var userAnswer = $('input[type="radio"][name="answer"]:checked').val();
 		var correctAnswer = question[count].correct;
 		compareAnswers(userAnswer, correctAnswer);
-		count++
+		count++;
+		if(questionCount < 10)
+			questionCount++;
 		updateQuestion();
 		$('.correct').text(correct);
+		feedback();
 	}
 
 	function compareAnswers(a, b){
 		if(a === b){
-			$('.feedbackModal').text("Correct!");
 			correct++;
-		}
-		else {
-			$('.feedbackModal').text("The correct answer was " + question[count].answer);
 		}
 	}
 
 	function updateQuestion(){
 		$('.correct').text(correct);
 		$('.count').text(count);
+		$('.questionCount').text(questionCount);
 		$('.picture').css('background-image', "url(" +question[count].picture + ")");
 		$('.answerA').text(question[count].answerA);
 		$('.answerB').text(question[count].answerB);
 		$('.answerC').text(question[count].answerC);
 		$('.answerD').text(question[count].answerD);
 		$('input[type="radio"][name="answer"]:first').attr("checked");
+	}
+
+	function feedback(){
+		var feedbackText = '';
+		if(correct == 10){
+			feedbackText = "Wow. You know your villains. What does that say about you?";
+		}
+		else if(correct >= 8){
+			feedbackText = "You would make a good villain sidekick. Well done.";
+		}
+		else if(correct >= 6){
+			feedbackText = "Not bad, but I think you could have done better.";
+		}
+		else if(correct >= 4){
+			feedbackText = "Someone could benefit from a film education course...";
+		}
+		else{
+			feedbackText = "I have no words... except movie night!";
+		}
+		$('#feedback').text(feedbackText);
 	}
 });
 

@@ -28,7 +28,7 @@
 			
 		</div>
 		<div class="question">
-			<h2><span class="orange">Villain</span> #<span class="count"></span></h2>
+			<h2><span class="orange">Villain</span> #<span class="questionCount"></span></h2>
 			<form class="answers">
   				<input type="radio" name="answer" value="a" checked><span class="answerA"></span></br>
   				<input type="radio" name="answer" value="b"><span class="answerB"></span></br>
@@ -39,7 +39,9 @@
 		</div>
 	</section>
 	<div class="feedbackModal">
-		
+		<p>You have answered <span class="correct"></span> out of <span class="count"></span> correct</p>
+		<p id="feedback"></p>
+		<input type="submit" value="Play Again?" id="playAgain">
 	</div>
 	<footer>
 		<h2>You have answered <span class="correct orange"></span> out of <span class="count"></span> correct</h2>
