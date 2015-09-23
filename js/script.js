@@ -2,6 +2,7 @@ $( document ).ready(function() {
 
     var question = [];
 
+    // add objects to array question
 	question.push({
 		picture: "images/mr-stay-puft.jpg", 
 		answerA: "Godzilla",
@@ -103,15 +104,18 @@ $( document ).ready(function() {
 		correct: "a",
 		answer: "Terminator 2: Judgement Day"
 	});
+	// end push objects into array question
 
 	var count = 0;
 	var correct = 0;
 	var questionCount = 1;
 
-	updateQuestion();
+	updateQuestion(); 
+	instructions();
 
 	$('form').submit(onFormSubmit);
-		
+
+	// handle form submission	
 	function onFormSubmit(event){
 		event.preventDefault();
 		var userAnswer = $('input[type="radio"][name="answer"]:checked').val();
@@ -126,13 +130,9 @@ $( document ).ready(function() {
 			questionCount++;
 		}
 		
-
 		updateQuestion();
-
 		$('.correct').text(correct);
-
 		feedback();
-
 	}
 
 	function compareAnswers(a, b){
@@ -180,6 +180,16 @@ $( document ).ready(function() {
 			questionCount = 1;
 			updateQuestion();
 			$('.feedbackModal').slideUp(1000);
+		});
+	}
+
+	function instructions(){
+		$('#return').on("click", function(){
+			$('.introModal').slideUp(1000);
+		});
+
+		$('.instructions i').on("click", function(){
+			$('.introModal').slideDown(1000);
 		});
 	}
 });

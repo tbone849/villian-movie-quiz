@@ -91,6 +91,10 @@ header {
   color: #FF9933;
 }
 
+i:hover {
+  cursor: pointer;
+}
+
 .content {
   width: 85%;
   margin-left: 15%;
@@ -190,4 +194,6 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-
+input:focus {
+  outline: 0;
+}
