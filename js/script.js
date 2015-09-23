@@ -118,11 +118,21 @@ $( document ).ready(function() {
 		var correctAnswer = question[count].correct;
 		compareAnswers(userAnswer, correctAnswer);
 		count++;
-		if(questionCount < 10)
+		if(questionCount == 10){
+			$('.feedbackModal').slideDown(1000);
+			newGame();
+		}
+		else if(questionCount < 10){
 			questionCount++;
+		}
+		
+
 		updateQuestion();
+
 		$('.correct').text(correct);
+
 		feedback();
+
 	}
 
 	function compareAnswers(a, b){
@@ -161,6 +171,16 @@ $( document ).ready(function() {
 			feedbackText = "I have no words... except movie night!";
 		}
 		$('#feedback').text(feedbackText);
+	}
+
+	function newGame(){
+		$('#playAgain').on("click", function(){
+			count = 0;
+			correct = 0;
+			questionCount = 1;
+			updateQuestion();
+			$('.feedbackModal').slideUp(1000);
+		});
 	}
 });
 
