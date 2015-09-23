@@ -107,12 +107,7 @@ $( document ).ready(function() {
 	var count;
 	var correct = 0;
 
-	$('.count').text(count + 1);
-	$('.villainPic').attr("src", question[count].picture);
-	$('.answerA').text(question[count].answerA);
-	$('.answerB').text(question[count].answerB);
-	$('.answerC').text(question[count].answerC);
-	$('.answerD').text(question[count].answerD);
+	updateQuestion();
 
 	$('form').submit(onFormSubmit);
 		
@@ -121,6 +116,8 @@ $( document ).ready(function() {
 		var userAnswer = $('input[type="radio"][name="answer"]:checked').val();
 		var correctAnswer = question[count].correct;
 		compareAnswers(userAnswer, correctAnswer);
+		count++
+		updateQuestion();
 	}
 
 	function compareAnswers(a, b){
@@ -131,6 +128,15 @@ $( document ).ready(function() {
 		else {
 			$('.feedbackModal').text("The correct answer was " + question[count].answer);
 		}
+	}
+
+	function updateQuestion(){
+		$('.count').text(count + 1);
+		$('.villainPic').attr("src", question[count].picture);
+		$('.answerA').text(question[count].answerA);
+		$('.answerB').text(question[count].answerB);
+		$('.answerC').text(question[count].answerC);
+		$('.answerD').text(question[count].answerD);
 	}
 
 });
