@@ -25,21 +25,24 @@
 	</header>
 	<section class="content">
 		<div class="picture">
-			<img src="images/mr-stay-puft.jpg" class="villainPic">
+			<img src="" class="villainPic">
 		</div>
 		<div class="question">
-			<h2><span class="orange">Villain</span> #7</h2>
+			<h2><span class="orange">Villain</span> #<span class="count"></span></h2>
 			<form class="answers">
-  				<input type="radio" name="answer" value="a" checked>Godzilla</br>
-  				<input type="radio" name="answer" value="b">Nightmare on Elm Street</br>
-  				<input type="radio" name="answer" value="c">Ghostbusters</br>
-  				<input type="radio" name="answer" value="d">Die Hard</br>
+  				<input id="a" type="radio" name="answer" value="a" checked><span class="answerA"></span></br>
+  				<input id="b" type="radio" name="answer" value="b"><span class="answerB"></span></br>
+  				<input id="c" type="radio" name="answer" value="c"><span class="answerC"></span></br>
+  				<input id="d" type="radio" name="answer" value="d"><span class="answerD"></span></br>
   				<input type="submit" value="Submit Answer" id="submitButton">
 			</form>
 		</div>
 	</section>
+	<div class="feedbackModal">
+		
+	</div>
 	<footer>
-		<h2>You have answered <span class="correct orange">5</span> out of 10 correct</h2>
+		<h2>You have answered <span class="correct orange"></span> out of <span class="count"></span> correct</h2>
 	</footer>
 	
 </body>

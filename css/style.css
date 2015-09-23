@@ -128,4 +128,5 @@ input[type="radio"] {
 
 footer {
   text-align: center;
+  display: none;
 }
