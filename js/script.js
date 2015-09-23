@@ -125,6 +125,7 @@ $( document ).ready(function() {
 		if(questionCount == 10){
 			$('.feedbackModal').slideDown(1000);
 			newGame();
+			feedback();
 		}
 		else if(questionCount < 10){
 			questionCount++;
@@ -132,7 +133,7 @@ $( document ).ready(function() {
 		
 		updateQuestion();
 		$('.correct').text(correct);
-		feedback();
+		
 	}
 
 	function compareAnswers(a, b){
@@ -150,7 +151,7 @@ $( document ).ready(function() {
 		$('.answerB').text(question[count].answerB);
 		$('.answerC').text(question[count].answerC);
 		$('.answerD').text(question[count].answerD);
-		$('input[type="radio"][name="answer"]:first').attr("checked");
+		$('input:radio[name=answer]')[0].checked = true;
 	}
 
 	function feedback(){
