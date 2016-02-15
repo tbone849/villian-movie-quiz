@@ -126,6 +126,16 @@ i:hover {
 
 #submitButton {
   margin-top: 2em;
+  background-color: #FF9933;
+  border: none;
+  padding: 15px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+
+#submitButton:hover {
+  background-color: black;
+  color: #FF9933;
 }
 
 input[type="radio"] {
@@ -196,4 +206,16 @@ footer {
 
 input:focus {
   outline: 0;
+}
+
+.vignette {
+    position: fixed;
+    -moz-box-shadow: inset 0 0 10em #000;  
+    -webkit-box-shadow: inset 0 0 10em #000;   
+    box-shadow: inset 0 0 10em #000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }

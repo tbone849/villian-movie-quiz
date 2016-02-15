@@ -112,6 +112,7 @@ $( document ).ready(function() {
 
 	updateQuestion(); 
 	instructions();
+	newGame();
 
 	$('form').submit(onFormSubmit);
 
@@ -122,16 +123,15 @@ $( document ).ready(function() {
 		var correctAnswer = question[count].correct;
 		compareAnswers(userAnswer, correctAnswer);
 		count++;
-		if(questionCount == 10){
+		if(questionCount === 10){
 			$('.feedbackModal').slideDown(1000);
-			newGame();
 			feedback();
 		}
 		else if(questionCount < 10){
 			questionCount++;
+			updateQuestion();
 		}
 		
-		updateQuestion();
 		$('.correct').text(correct);
 		
 	}
